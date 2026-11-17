@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy Christmas</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--red:#a92f3c;--green:#174c3b;--cream:#fff8ed;--gold:#d8ae63}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:#24352d;font-family:'DM Sans',sans-serif}
+header{min-height:90vh;color:white;background:linear-gradient(120deg,rgba(8,45,34,.88),rgba(8,45,34,.35)),radial-gradient(circle at 80% 20%,#c58a46 0 2px,transparent 3px),linear-gradient(135deg,#153f32,#27634a 55%,#102e26);position:relative;overflow:hidden}
+nav{max-width:1100px;margin:auto;padding:26px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem;letter-spacing:.5px}.logo span{color:#f0cf8a}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:.9rem;opacity:.9}
+nav a:hover{color:#f0cf8a}
+.hero{max-width:1100px;margin:auto;padding:100px 7% 120px;position:relative;z-index:1}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#f0cf8a;font-size:.75rem;font-weight:700}
+h1{font:700 clamp(3.5rem,8vw,6.8rem)/.98 'Playfair Display',serif;max-width:720px;margin:22px 0}
+.hero p{font-size:1.08rem;line-height:1.8;max-width:480px;color:#e6eee8}
+.btn{display:inline-block;margin-top:22px;padding:14px 23px;border-radius:30px;background:#f0cf8a;color:#183d30;text-decoration:none;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 24px #0003}
+.snow{position:absolute;color:#ffffff55;font-size:2rem;animation:fall 12s linear infinite;top:-40px}
+.s1{left:12%;animation-delay:0s}.s2{left:35%;animation-delay:4s;font-size:1.2rem}.s3{left:68%;animation-delay:2s}.s4{left:88%;animation-delay:6s;font-size:1.4rem}
+@keyframes fall{to{transform:translateY(105vh) rotate(240deg)}}
+section{padding:85px 7%;max-width:1200px;margin:auto}
+.section-head{text-align:center;margin-bottom:42px}
+h2{font:700 clamp(2.2rem,4vw,3.2rem) 'Playfair Display',serif;color:var(--green);margin:10px 0}
+.section-head p{color:#68766e}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border-radius:18px;padding:28px;box-shadow:0 12px 35px #173d2c0c;border:1px solid #eee7da}
+.emoji{font-size:2.5rem}.card h3{font:700 1.35rem 'Playfair Display',serif;color:var(--green)}
+.card p{line-height:1.7;color:#66736b}
+.countdown{background:var(--green);color:white;text-align:center;padding:65px 7%;max-width:none}
+.countdown h2{color:white}.timer{display:flex;justify-content:center;gap:18px;margin-top:30px;flex-wrap:wrap}
+.timebox{background:#ffffff12;border:1px solid #ffffff25;border-radius:14px;padding:18px 24px;min-width:95px}
+.timebox strong{display:block;font:700 2.2rem 'Playfair Display',serif;color:#f0cf8a}.timebox span{font-size:.75rem;letter-spacing:1px;text-transform:uppercase}
+.note{max-width:700px;margin:28px auto 0;color:#d7e4dc;line-height:1.7}
+footer{text-align:center;padding:28px;color:#dce8df;background:#102e26;font-size:.85rem}
+@media(max-width:700px){nav{align-items:flex-start;gap:15px;flex-direction:column}nav a{margin:0 15px 0 0}.hero{padding-top:80px}.cards{grid-template-columns:1fr}section{padding:65px 7%}}
+</style>
+</head>
+<body>
+<header id="home">
+  <span class="snow s1">❄</span><span class="snow s2">✦</span><span class="snow s3">❄</span><span class="snow s4">✧</span>
+  <nav><div class="logo">✦ <span>Cozy</span> Christmas</div><div><a href="#magic">The magic</a><a href="#countdown">Countdown</a><a href="#ideas">Ideas</a></div></nav>
+  <div class="hero">
+    <div class="eyebrow">The most wonderful time of the year</div>
+    <h1>Make it a little more magical.</h1>
+    <p>Twinkling lights, warm mugs, snowy evenings and memories that last. Welcome to your cozy little corner of Christmas.</p>
+    <a class="btn" href="#magic">Explore the magic&nbsp; ↓</a>
+  </div>
+</header>
+<section id="magic">
+  <div class="section-head"><div class="eyebrow" style="color:#a92f3c">A season to remember</div><h2>Little things. Big magic.</h2><p>Slow down, get cozy, and enjoy the moments that make the season special.</p></div>
+  <div class="cards">
+    <article class="card"><div class="emoji">🎄</div><h3>Deck the halls</h3><p>Put on your favorite festive playlist and make your space glow with lights, ornaments and handmade decorations.</p></article>
+    <article class="card"><div class="emoji">☕</div><h3>Cozy moments</h3><p>Make a warm drink, grab your softest blanket and settle in for a peaceful winter evening.</p></article>
+    <article class="card"><div class="emoji">🎁</div><h3>Give a little joy</h3><p>Thoughtful notes, homemade treats and time together can be the loveliest gifts of all.</p></article>
+  </div>
+</section>
+<section class="countdown" id="countdown">
+  <div class="eyebrow">Save a little sparkle for the big day</div><h2>Christmas countdown</h2>
+  <div class="timer">
+    <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+    <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+    <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+    <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+  <p class="note" id="countdown-note">A little more magic is on its way…</p>
+</section>
+<section id="ideas">
+  <div class="section-head"><div class="eyebrow" style="color:#a92f3c">Your festive checklist</div><h2>Make the season yours</h2><p>Pick a few simple traditions and make some memories.</p></div>
+  <div class="cards">
+    <article class="card"><div class="emoji">🍪</div><h3>Bake something</h3><p>Try a new cookie recipe or decorate gingerbread with family and friends.</p></article>
+    <article class="card"><div class="emoji">🎬</div><h3>Movie night</h3><p>Choose a holiday favorite, make popcorn and let the cozy evening begin.</p></article>
+    <article class="card"><div class="emoji">✨</div><h3>Spread kindness</h3><p>Send someone a kind message or do a small thoughtful thing for a neighbor.</p></article>
+  </div>
+</section>
+<footer>Made with ✦ and a little Christmas magic · Happy holidays!</footer>
+<script>
+function updateCountdown(){
+ const now=new Date(), year=now.getFullYear();
+ let target=new Date(year,11,25,0,0,0);
+ if(now>=target) target=new Date(year+1,11,25,0,0,0);
+ const diff=target-now;
+ const units={days:Math.floor(diff/86400000),hours:Math.floor(diff/3600000)%24,minutes:Math.floor(diff/60000)%60,seconds:Math.floor(diff/1000)%60};
+ Object.entries(units).forEach(([id,value])=>document.getElementById(id).textContent=String(value).padStart(2,'0'));
+ document.getElementById('countdown-note').textContent='Counting down to December 25, '+target.getFullYear()+'.';
+}
+updateCountdown();setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
